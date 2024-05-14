@@ -6,7 +6,8 @@ import openAIEmbeddings as oae
 
 app = Flask(__name__)
 # cors = CORS(app, resources={r"/answer": {"origins": "https://manchita-front-a39e69c799a1.herokuapp.com"}})
-cors = CORS(app, origins='https://manchita-front-a39e69c799a1.herokuapp.com')
+# cors = CORS(app, origins='https://manchita-front-a39e69c799a1.herokuapp.com')
+CORS(app, origins='*')
 
 openai.api_type = settings.APITYPE
 openai.api_base = settings.APIBASE
